@@ -13,7 +13,7 @@ const UserView = ({ products, fetchProducts }) => {
   const [searchName, setSearchName] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [status, setStatus] = useState("all");
+  const [status, setStatus] = useState("active");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -106,7 +106,6 @@ const UserView = ({ products, fetchProducts }) => {
                     <Col xs={12} md="auto">
                       <Form.Group controlId="statusFilter">
                         <Form.Select value={status} onChange={(e) => setStatus(e.target.value)}>
-                          <option value="all">All Status</option>
                           <option value="active">Active</option>
                           <option value="outOfStock">Out of Stock</option>
                           <option value="trending">Trending</option>
